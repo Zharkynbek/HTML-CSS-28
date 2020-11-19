@@ -5,7 +5,7 @@
 @import "./utils/mixins";
 
 body {
-  background-color: rgb(190, 128, 128);
+  background-color: $logo-color;
   font-family: Roboto;
   margin: 0;
 }
@@ -20,12 +20,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-:root {
-  --primery-text-color: #757575;
-  --primery-title-color: #212121;
-  --logo-color: #2196f3;
 }
 
 .list {

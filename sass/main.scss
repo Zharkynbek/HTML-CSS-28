@@ -1,0 +1,56 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./components/page-header";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
+body {
+  background-color: rgb(190, 128, 128);
+  font-family: Roboto;
+  margin: 0;
+}
+
+.skryt {
+  display: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:root {
+  --primery-text-color: #757575;
+  --primery-title-color: #212121;
+  --logo-color: #2196f3;
+}
+
+.list {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto;
+}
+
+h2,
+h3 {
+  color: var(--primery-title-color);
+}
+
+p {
+  color: var(--primery-text-color);
+}
+
+a {
+  font-family: Roboto;
+  text-decoration: none;
+}

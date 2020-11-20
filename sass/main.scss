@@ -3,9 +3,9 @@
 @import "./components/page-header";
 @import "./utils/placeholders";
 @import "./utils/mixins";
+@import "./components/banner";
 
 body {
-  background-color: $logo-color;
   font-family: Roboto;
   margin: 0;
 }
@@ -20,10 +20,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.list {
-  list-style: none;
 }
 
 h1,

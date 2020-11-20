@@ -1,7 +1,3 @@
-$primery-text-color: #757575;
-$primery-title-color: #212121;
-$logo-color: #2196f3;
-
 .header {
   background-color: #fff;
 }
@@ -28,19 +24,16 @@ $logo-color: #2196f3;
 
 .nav {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .main-nav {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .site-navi {
+  @extend %list;
   display: flex;
   margin: 0;
   padding: 0;
@@ -50,10 +43,9 @@ $logo-color: #2196f3;
   .item:last-child {
     margin-right: 0;
   }
-}
-
-.site-navi a {
-  color: $primery-title-color;
+  a {
+    color: $primery-title-color;
+  }
 }
 
 .site-navi .link {
@@ -77,11 +69,8 @@ $logo-color: #2196f3;
     height: 4px;
     opacity: 0;
     background-color: $logo-color;
-    -webkit-transition-property: $logo-color;
     transition-property: $logo-color;
-    -webkit-transition-duration: 250ms;
     transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     a {
       color: $primery-title-color;

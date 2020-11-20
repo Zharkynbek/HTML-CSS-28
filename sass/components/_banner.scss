@@ -8,7 +8,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/overlay.jpg");
+    url("/images/overlay.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -113,7 +113,7 @@
 
   .form-field {
     position: relative;
-    display: flex;
+    display: $type;
     flex-direction: column;
     margin-bottom: 10px;
     font-family: Roboto;
@@ -123,6 +123,17 @@
     line-height: 1.666;
     letter-spacing: 0.01em;
     color: #757575;
+
+    &:hover > .modal-icons,
+    &:focus > .modal-icons {
+      stroke: $logo-color;
+      fill: $logo-color;
+    }
+
+    &:hover > .form-box,
+    &:focus > .form-box {
+      border: 1px solid $logo-color;
+    }
   }
 }
 
@@ -137,63 +148,14 @@
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-field:hover > .modal-icons,
-.form-field:focus > .modal-icons {
-  stroke: $logo-color;
-  fill: $logo-color;
-}
+  &:focus {
+    border: 1px solid $logo-color;
+  }
 
-.form-field:hover > .form-box,
-.form-field:focus > .form-box {
-  border: 1px solid $logo-color;
-}
-
-.form-comment:hover > .form-box-text,
-.form-comment:focus > .form-box-text {
-  border: 1px solid $logo-color;
-}
-
-.form-box:focus {
-  border: 1px solid $logo-color;
-}
-
-.form-box-text:focus {
-  border: 1px solid $logo-color;
-}
-
-.checkbox:checked .galochka:focus {
-  border: 1px solid $logo-color;
-}
-
-.contract-link:focus {
-  outline-color: $logo-color;
-}
-
-.send-modal:focus {
-  outline: none;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.form-box:focus + .modal-icons {
-  fill: $logo-color;
-}
-
-.form-box-text {
-  cursor: pointer;
-  padding: 12px 16px;
-  height: 120px;
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.666;
-  outline: transparent;
-  letter-spacing: 0.01em;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  &:focus + .modal-icons {
+    fill: $logo-color;
+  }
 }
 
 .form-comment {
@@ -204,6 +166,29 @@
   letter-spacing: 0.01em;
   margin-bottom: 20px;
   color: #757575;
+
+  .form-box-text {
+    cursor: pointer;
+    padding: 12px 16px;
+    height: 120px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.666;
+    outline: transparent;
+    letter-spacing: 0.01em;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+
+    &:focus {
+      border: 1px solid $logo-color;
+    }
+  }
+
+  &:hover > .form-box-text,
+  &:focus > .form-box-text {
+    border: 1px solid $logo-color;
+  }
 }
 
 .send-modal {
@@ -225,26 +210,54 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: $logo-color;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
 }
 
 .contract {
-  display: flex;
+  display: $type;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-}
 
-.contract-link {
-  text-decoration: underline;
-  color: $logo-color;
-}
+  .contract-link {
+    text-decoration: underline;
+    color: $logo-color;
 
-.contract-box {
-  display: flex;
-  align-items: center;
-  margin-left: 9px;
+    &:focus {
+      outline-color: $logo-color;
+    }
+  }
+
+  .contract-box {
+    display: $type;
+    align-items: center;
+    margin-left: 9px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .galochka {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 4px;
+    margin-right: 7px;
+    border: 2px solid #212121;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .weg {
+    opacity: 0;
+  }
 }
 
 .modal-icons {
@@ -259,60 +272,34 @@
 .checkbox {
   appearance: none;
   position: absolute;
-}
 
-.galochka {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border-radius: 4px;
-  margin-right: 7px;
-  border: 2px solid #212121;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &:checked .galochka:focus {
+    border: 1px solid $logo-color;
+  }
 
-/* .checkbox:focus + .galochka {
-  border: 2px solid #2196f3;
-  background-color: #2196f3;
-  background-image: url("../images/galochka.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-position: center;
-} */
+  &:checked + .galochka {
+    background-color: $logo-color;
+    background-image: url("/images/galochka.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center;
+  }
 
-.checkbox:checked + .galochka {
-  background-color: $logo-color;
-  background-image: url("../images/galochka.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-position: center;
-}
+  &:checked:focus + .galochka {
+    background-color: $logo-color;
+    background-image: url("/images/galochka.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center;
+  }
 
-.checkbox:checked:focus + .galochka {
-  background-color: $logo-color;
-  background-image: url("../images/galochka.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-position: center;
-}
+  &:focus + .galochka {
+    border: 2px solid $logo-color;
+  }
 
-.checkbox:focus + .galochka {
-  border: 2px solid $logo-color;
-}
-
-.checkbox:checked + .galochka {
-  border: 2px solid$logo-color;
-}
-
-.contract-box {
-  cursor: pointer;
-  position: relative;
-}
-
-.weg {
-  opacity: 0;
+  &:checked + .galochka {
+    border: 2px solid$logo-color;
+  }
 }

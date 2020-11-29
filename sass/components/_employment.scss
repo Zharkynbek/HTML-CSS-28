@@ -1,6 +1,9 @@
 .foto-section {
   background-color: #fff;
   padding-bottom: 94px;
+  @media screen and (max-width: 1139px) {
+    display: none;
+  }
 
   .second-big-title {
     margin-top: 0;
@@ -15,17 +18,22 @@
 
 .second-item {
   @extend %list;
-  display: $type;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  padding-inline-start: 0;
 
-  .item {
-    margin-right: 30px;
+  @media screen and (max-width: 1139px) {
+    display: none;
+  }
+}
 
-    &:last-child {
-      margin-right: 0;
-    }
+.item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 

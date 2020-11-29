@@ -1,32 +1,58 @@
 .flexbox {
-  display: $type;
-  justify-content: flex-start;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1140px) {
+    justify-content: space-between;
+    text-align: start;
+    flex-wrap: nowrap;
+  }
 }
 
 .content-box {
+  text-align: center;
   align-items: center;
-  .street {
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.714;
-    padding-top: 20px;
-    padding-bottom: 0;
-    border-bottom: 0px;
-    margin-right: 70px;
+  justify-content: center;
+
+  @media screen and (max-width: 1140px) {
+    margin-bottom: 60px;
+    text-align: center;
   }
 
-  .under-studio {
-    color: #fff;
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 1.192;
+  @media screen and (min-width: 1140px) {
+    margin-bottom: 60px;
+    text-align: left;
   }
+}
+
+.street {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.714;
+  padding-top: 20px;
+  padding-bottom: 0;
+  border-bottom: 0px;
+  text-align: center;
+}
+
+.under-studio {
+  color: #fff;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.192;
 }
 
 .social-link {
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
   p {
     margin-bottom: 20px;
@@ -39,10 +65,11 @@
 
 .social-footer {
   @extend %list;
-  display: $type;
+  display: flex;
   padding: 0;
   margin-top: 10px;
   margin-bottom: 0;
+  justify-content: center;
 
   li:not(:last-child) {
     margin-right: 10px;
@@ -73,26 +100,29 @@
 }
 
 .subscribe {
-  margin-left: auto;
+  /* width: 570px; */
 
-  .subscribe-text {
-    margin-left: 93px;
-    margin-bottom: 20;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.145;
-    color: #fff;
+  @media screen and (min-width: 1140px) {
+    /* 
+    display: flex; */
   }
 }
 
-.subscribe-footer {
-  margin-top: 20px;
-  margin-left: 93px;
+.subscribe-text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.145;
+  color: #fff;
 
-  .subscribe-box {
-    display: $type;
-    align-items: center;
-    justify-content: center;
+  @media screen and (max-width: 1140px) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1140px) {
+    text-align: left;
+    margin-bottom: 20px;
   }
 }
 
@@ -109,8 +139,29 @@
   padding-left: 10px;
 }
 
+.subscribe-footer {
+  text-align: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1140px) {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.footer-btn {
+  @media screen and (max-width: 1140px) {
+    display: flex;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1140px) {
+    text-align: left;
+  }
+}
 .subscribe-btn {
-  display: $type;
+  display: flex;
   cursor: pointer;
   align-items: center;
   text-align: center;
@@ -123,10 +174,19 @@
   line-height: 1.875;
   font-weight: bold;
   letter-spacing: 0.06em;
-  margin-left: 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1140px) {
+    display: flex;
+    margin: 0;
+
+    margin-left: 10px;
+  }
 
   &::after {
     content: "";
@@ -148,7 +208,16 @@
   margin-bottom: 0;
   padding-left: 0;
 
+  @media screen and (max-width: 1140px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1140px) {
+    text-align: left;
+  }
+
   .link {
+    display: inline-block;
     color: $primery-text-color;
     font-weight: 500;
     font-size: 14px;

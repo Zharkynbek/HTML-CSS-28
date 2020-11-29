@@ -1,9 +1,12 @@
 .header {
-  background-color: #fff;
+  background-color: rgb(236, 191, 191);
+  height: 80px;
 }
 
 .logotip {
   display: inline;
+  align-items: center;
+  justify-content: center;
   .web {
     color: $logo-color;
     font-family: Raleway;
@@ -18,23 +21,49 @@
     font-weight: bold;
     font-size: 26px;
     line-height: 1.192;
-    margin-right: 93px;
   }
 }
 
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: block;
+}
+
+.menu-button.is-open .icon-cross {
+  display: none;
+}
+
 .nav {
-  display: $type;
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+/* 
+.nav {
+  display: flex;
   align-items: center;
 }
 
 .main-nav {
-  display: $type;
+  display: flex;
   align-items: center;
 }
 
 .site-navi {
   @extend %list;
-  display: $type;
+  display: flex;
   margin: 0;
   padding: 0;
   .item {
@@ -88,13 +117,13 @@
 }
 
 .link-type {
-  display: $type;
+  display: flex;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   .item-info {
-    display: $type;
+    display: flex;
     align-items: center;
     margin-right: 50px;
     &:last-child {
@@ -103,7 +132,7 @@
   }
   .link {
     font-weight: 500;
-    display: $type;
+    display: flex;
     align-items: center;
     fill: #757575;
     transition-property: $logo-color;
@@ -157,4 +186,4 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
+} */

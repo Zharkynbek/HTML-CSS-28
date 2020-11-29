@@ -1,4 +1,4 @@
-.tretii-section {
+.team-section {
   background-color: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
@@ -13,19 +13,73 @@
     text-align: center;
     padding-bottom: 50px;
   }
+}
 
-  .tretii-list {
-    @extend %list;
-    display: $type;
-    margin: 0;
-    padding: 0;
-    align-items: center;
+.team-list {
+  @extend %list;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1140px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.team-item {
+  background-color: #fff;
+  padding-bottom: 30px;
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    /*  &:not(:last-child) {
+      margin-bottom: 30px;
+    } */
+  }
+
+  @media screen and (min-width: 767px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    /* &:not(:last-child) {
+      margin-bottom: 30px;
+    } */
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    width: calc((100% - 3 * 30px) / 4);
+
+    margin-right: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 30px;
   }
 }
 
 .social {
   @extend %list;
-  display: $type;
+  display: flex;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -67,29 +121,24 @@
   }
 }
 
-.team-item {
-  margin-right: 30px;
-  background-color: #fff;
-  padding-bottom: 30px;
-
-  .name-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-
-  .name-text {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-
-    font-size: 16px;
-    line-height: 1.187;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+.name-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
+
+.name-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 1.187;
+}
+
+/* &:last-child {
+  margin-right: 0;
+}
+ */

@@ -481,7 +481,6 @@ summary {
   }
 } */
 .primery-section {
-  max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -869,10 +868,12 @@ summary {
 
 .quality-item {
   text-align: center;
-}
-
-.quality-item:not(:last-child) {
-  margin-bottom: 30px;
+  /* @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -888,7 +889,16 @@ summary {
     margin-bottom: 30px;
   }
   .quality-item:nth-last-child(-n + 2) {
-    margin-bottom: 30;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .quality-item {
+    margin-right: 0;
+  }
+  .quality-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -899,6 +909,16 @@ summary {
   }
   .quality-item:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .quality-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .quality-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -1063,27 +1083,18 @@ summary {
   text-align: center;
 }
 
-.team-item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 768px) {
-  .team-item {
-    /*  &:not(:last-child) {
-      margin-bottom: 30px;
-    } */
+@media screen and (max-width: 767px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .team-item {
     width: calc((100% - 2 * 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
     text-align: left;
-    /* &:not(:last-child) {
-      margin-bottom: 30px;
-    } */
   }
   .team-item:nth-child(2n) {
     margin-right: 0;
@@ -1103,8 +1114,13 @@ summary {
   }
 }
 
-.team-item:nth-last-child(-n + 2) {
-  margin-bottom: 30px;
+@media screen and (min-width: 1140px) {
+  .team-item {
+    margin-bottom: 0;
+  }
+  .team-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .social {
@@ -1179,10 +1195,6 @@ summary {
   line-height: 1.187;
 }
 
-/* &:last-child {
-  margin-right: 0;
-}
- */
 .logo-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1244,6 +1256,7 @@ summary {
 @media screen and (min-width: 1140px) {
   .logo-item:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -1430,17 +1443,6 @@ summary {
 .footer-icons:hover, .footer-icons:focus {
   outline: none;
   background-color: #2196f3;
-}
-
-.subscribe {
-  /* width: 570px; */
-}
-
-@media screen and (min-width: 1140px) {
-  .subscribe {
-    /* 
-    display: flex; */
-  }
 }
 
 .subscribe-text {

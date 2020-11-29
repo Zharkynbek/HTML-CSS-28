@@ -11,10 +11,16 @@
 @import "./components/footer";
 @import "./components/radio-btn";
 @import "./components/select-picters";
+@import "./components/modal";
+@import "./components/menu";
 
 body {
   font-family: Roboto;
   margin: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .skryt {

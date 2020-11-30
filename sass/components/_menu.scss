@@ -24,26 +24,37 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  min-height: 80px;
 }
 
 .menu-container {
-  background-color: rgb(207, 228, 18);
-  text-align: center;
+  background-color: #fff;
   font-size: 20px;
-  align-items: center;
-  justify-content: center;
 
   @media screen and (max-width: 767px) {
     display: none;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 480px;
     height: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
 .menu-container.is-open {
   display: block;
+
+  text-align: center;
+}
+
+.site-navi {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+  }
 }

@@ -372,7 +372,7 @@ summary {
   color: #212121;
 }
 
-.site-navi .site-link {
+.site-link {
   display: block;
   position: relative;
   padding-top: 32px;
@@ -384,7 +384,7 @@ summary {
   letter-spacing: 0.02em;
 }
 
-.site-navi .site-link::after {
+.site-link::after {
   position: absolute;
   content: "";
   display: block;
@@ -403,7 +403,7 @@ summary {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-navi .site-link::after a {
+.site-link::after a {
   color: #212121;
 }
 
@@ -1892,13 +1892,15 @@ summary {
 }
 
 .mobile-menu {
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   position: absolute;
   left: 0;
   right: 0;
   opacity: 0;
   visibility: hidden;
   width: 453px;
-  height: 480px;
   background-color: #fff;
 }
 
@@ -1916,15 +1918,94 @@ summary {
 .mobile-site-navi {
   text-align: center;
   list-style: none;
+  margin-bottom: 60px;
+  margin-top: 0;
+  padding: 0;
+  border: none;
 }
 
 .mobile-link-type {
+  padding: 0;
+  margin: 0;
   text-align: center;
   list-style: none;
 }
 
 .mobile-site-item:not(:last-child) {
   margin-bottom: 40px;
+}
+
+.mobile-item-info:last-child {
+  margin-top: 16px;
+}
+
+.mobile-info-link {
+  font-weight: 500;
+  color: #757575;
+  -webkit-transition-property: #2196f3;
+  transition-property: #2196f3;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-info-link .link-icon {
+  margin-right: 10px;
+}
+
+.mobile-info-link:hover, .mobile-info-link:focus {
+  outline: none;
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.mobile-site-link {
+  position: relative;
+  outline: none;
+  color: #212121;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+}
+
+.mobile-site-link::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  background-color: #2196f3;
+  -webkit-transition-property: #2196f3;
+  transition-property: #2196f3;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-site-link.current {
+  color: #2196f3;
+}
+
+.mobile-site-link.current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  opacity: 1;
+  bottom: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 4px;
+  margin-top: 8px;
+  background-color: #2196f3;
+  background-size: auto;
+  border-radius: 2px;
 }
 
 body {

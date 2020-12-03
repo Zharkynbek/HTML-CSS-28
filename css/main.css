@@ -2050,8 +2050,25 @@ summary {
     
   } */
 .div-foto {
-  padding-top: 20px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .div-foto {
+    margin-top: 46px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .div-foto {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .div-foto {
+    margin-top: 56px;
+  }
 }
 
 .thumb {
@@ -2230,8 +2247,20 @@ body.modal-open {
 
 .portfolio-content {
   background-color: #ffffff;
-  padding-top: 94px;
-  padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1199px) {
+  .portfolio-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-content {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 footer {

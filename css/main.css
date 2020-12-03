@@ -282,6 +282,17 @@ summary {
 } */
 .header {
   background-color: #fff;
+  min-height: 60px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 /* .header .container {
@@ -313,6 +324,23 @@ summary {
   }
 }
 
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .logotip {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-right: 81px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
 .logotip .web {
   color: #2196f3;
   font-family: Raleway;
@@ -328,6 +356,18 @@ summary {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .main-nav {
@@ -340,9 +380,6 @@ summary {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .site-navi {
@@ -424,9 +461,20 @@ summary {
 
 @media screen and (min-width: 768px) {
   .link-type {
-    display: block;
-    margin-left: 84px;
-    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 50px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   .link-type .item-info:last-child {
     margin-top: 10px;

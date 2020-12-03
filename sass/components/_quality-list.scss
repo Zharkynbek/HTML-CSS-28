@@ -8,7 +8,7 @@
     padding-bottom: 30px;
   }
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -28,7 +28,7 @@
     }
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
   }
 }
@@ -59,7 +59,7 @@
     }
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 3 * 30px) / 4);
     text-align: left;
 
@@ -73,7 +73,7 @@
     }
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }

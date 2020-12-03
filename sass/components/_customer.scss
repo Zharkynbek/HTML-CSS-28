@@ -11,7 +11,7 @@
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
   }
 }
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     &:not(:last-child) {
       margin-right: 30px;
       margin-bottom: 0;
@@ -80,7 +80,7 @@
   padding-top: 94px;
   padding-bottom: 94px;
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     padding-top: 30px;
     padding-bottom: 30px;
   }

@@ -5,7 +5,7 @@
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     justify-content: space-between;
     text-align: start;
     flex-wrap: nowrap;
@@ -17,12 +17,12 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     margin-bottom: 60px;
     text-align: center;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 60px;
     text-align: left;
   }
@@ -106,12 +106,12 @@
   line-height: 1.145;
   color: #fff;
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     text-align: left;
     margin-bottom: 20px;
   }
@@ -134,7 +134,7 @@
   text-align: center;
   justify-content: center;
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -142,12 +142,12 @@
 }
 
 .footer-btn {
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     display: flex;
     text-align: center;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     text-align: left;
   }
 }
@@ -172,7 +172,7 @@
   margin-right: auto;
   margin-top: 20px;
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     margin: 0;
 
@@ -199,11 +199,11 @@
   margin-bottom: 0;
   padding-left: 0;
 
-  @media screen and (max-width: 1140px) {
+  @media screen and (max-width: 1200px) {
     text-align: center;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     text-align: left;
   }
 

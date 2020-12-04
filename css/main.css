@@ -1736,7 +1736,7 @@ summary {
     -webkit-transform: translate(-50%, -40%);
             transform: translate(-50%, -40%);
     position: absolute;
-    top: 11%;
+    top: 17%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
@@ -1751,7 +1751,7 @@ summary {
 @media screen and (max-width: 767px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1768,7 +1768,7 @@ summary {
     position: absolute;
     background-color: #fff;
     left: 50%;
-    top: 50%;
+    top: 40%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: 528px;
